@@ -1,0 +1,20 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RemoteDeviceControllerForWindows.UserControls"
+             xmlns:ViewModels="clr-namespace:RemoteDeviceControllerForWindows.ViewModels" x:Name="userControl" x:Class="RemoteDeviceControllerForWindows.UserControls.FileInfoControl"
+             mc:Ignorable="d" Foreground="#FF36EE00" Height="131.331" Width="122.318" Background="Transparent" >
+    <UserControl.ContextMenu>
+        <ContextMenu AlternationCount="-2">
+            <MenuItem x:Name="saveAsMenuItem" Header="Save As" Click="saveAsMenuItem_Click"/>
+            <MenuItem x:Name="encryptAsMenuItem" Header="Encrypt As" Click="encryptAsMenuItem_Click"/>
+            <MenuItem x:Name="decryptAsMenuItem" Header="Decrypt As" Click="decryptAsMenuItem_Click"/>
+        </ContextMenu>
+    </UserControl.ContextMenu>
+    <Grid>
+        <Image x:Name="iconImage" Margin="20,10,0,0" Source="{Binding Icon, ElementName=userControl}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="68" Width="82"/>
+        <TextBlock x:Name="textBlock" Margin="10,0,10,10" TextWrapping="Wrap" Text="{Binding FileName, ElementName=userControl}" TextAlignment="Center" FontSize="11" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="102" Height="38"/>
+    </Grid>
+</UserControl>

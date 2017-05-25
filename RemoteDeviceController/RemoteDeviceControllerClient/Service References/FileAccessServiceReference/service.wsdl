@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FileAccessService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IFileAccessService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFileAccessService_GetDirectoryFileNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoryFileNames" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_GetDirectoryFileNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoryFileNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_GetDirectoryFolderNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoryFolderNames" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_GetDirectoryFolderNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDirectoryFolderNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_GetFileThumbnail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileThumbnail" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_GetFileThumbnail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileThumbnailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_GetFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFile" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_GetFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_GetAccessibleDirectorys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessibleDirectorys" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_GetAccessibleDirectorys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccessibleDirectorysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileAccessService_Connect_InputMessage">
+    <wsdl:part name="parameters" element="tns:Connect" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IFileAccessService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetDirectoryFileNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileAccessService/GetDirectoryFileNames" message="tns:IFileAccessService_GetDirectoryFileNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileAccessService/GetDirectoryFileNamesResponse" message="tns:IFileAccessService_GetDirectoryFileNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetDirectoryFolderNames">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileAccessService/GetDirectoryFolderNames" message="tns:IFileAccessService_GetDirectoryFolderNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileAccessService/GetDirectoryFolderNamesResponse" message="tns:IFileAccessService_GetDirectoryFolderNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetFileThumbnail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileAccessService/GetFileThumbnail" message="tns:IFileAccessService_GetFileThumbnail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileAccessService/GetFileThumbnailResponse" message="tns:IFileAccessService_GetFileThumbnail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileAccessService/GetFile" message="tns:IFileAccessService_GetFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileAccessService/GetFileResponse" message="tns:IFileAccessService_GetFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetAccessibleDirectorys">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileAccessService/GetAccessibleDirectorys" message="tns:IFileAccessService_GetAccessibleDirectorys_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileAccessService/GetAccessibleDirectorysResponse" message="tns:IFileAccessService_GetAccessibleDirectorys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Connect">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileAccessService/Connect" message="tns:IFileAccessService_Connect_InputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IFileAccessService" type="tns:IFileAccessService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IFileAccessService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetDirectoryFileNames">
+      <soap12:operation soapAction="http://tempuri.org/IFileAccessService/GetDirectoryFileNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDirectoryFolderNames">
+      <soap12:operation soapAction="http://tempuri.org/IFileAccessService/GetDirectoryFolderNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileThumbnail">
+      <soap12:operation soapAction="http://tempuri.org/IFileAccessService/GetFileThumbnail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap12:operation soapAction="http://tempuri.org/IFileAccessService/GetFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccessibleDirectorys">
+      <soap12:operation soapAction="http://tempuri.org/IFileAccessService/GetAccessibleDirectorys" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Connect">
+      <soap12:operation soapAction="http://tempuri.org/IFileAccessService/Connect" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FileAccessService">
+    <wsdl:port name="NetTcpBinding_IFileAccessService" binding="tns:NetTcpBinding_IFileAccessService">
+      <soap12:address location="net.tcp://localhost:8111/service" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://localhost:8111/service</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

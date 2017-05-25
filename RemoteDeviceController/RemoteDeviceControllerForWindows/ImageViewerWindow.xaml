@@ -1,0 +1,32 @@
+﻿<Window x:Name="window" x:Class="RemoteDeviceControllerForWindows.ImageViewerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RemoteDeviceControllerForWindows"
+        mc:Ignorable="d"
+        Title="ImageViewerWindow" Height="300" Width="300" Background="Black" Foreground="#FF36EE00">
+    <Grid x:Name="mainGrid"  >
+        <Grid.Resources>
+            <TransformGroup x:Key="Imageview">
+                <ScaleTransform/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.Resources>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Disabled" Background="{x:Null}"   Cursor="SizeAll"
+                  Margin="5,5,5,38" Focusable="False" x:Name="BackFrame"  >
+            <ContentControl Name="contentControl"
+                            MouseLeftButtonDown="contentControl_MouseLeftButtonDown"   
+                             MouseLeftButtonUp="contentControl_MouseLeftButtonUp"
+                             MouseMove="contentControl_MouseMove"
+                      MouseWheel="contentControl_MouseWheel" 
+                             >
+                <Image Name="image" Source="{Binding Icon, ElementName=window}" RenderTransform="{StaticResource Imageview}" Stretch="Uniform" RenderOptions.BitmapScalingMode="NearestNeighbor"/>
+            </ContentControl>
+        </ScrollViewer>
+        <Button x:Name="zoomInButton" Content="-" HorizontalAlignment="Center" Margin="115,0,152,8" VerticalAlignment="Bottom" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{Binding Foreground, ElementName=window}" Click="zoomInButton_Click"/>
+        <Button x:Name="zoomOutButton" Content="+" HorizontalAlignment="Center" Margin="145,0,122,8" VerticalAlignment="Bottom" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{Binding Foreground, ElementName=window}" Click="zoomOutButton_Click"/>
+        <Button x:Name="nextButton" Content="&gt;" HorizontalAlignment="Center" Margin="175,0,92,8" VerticalAlignment="Bottom" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{Binding Foreground, ElementName=window}" Click="nextButton_Click"/>
+        <Button x:Name="previousButton" Content="&lt;" HorizontalAlignment="Center" Margin="85,0,182,8" VerticalAlignment="Bottom" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{Binding Foreground, ElementName=window}" Click="previousButton_Click"/>
+    </Grid>
+</Window>

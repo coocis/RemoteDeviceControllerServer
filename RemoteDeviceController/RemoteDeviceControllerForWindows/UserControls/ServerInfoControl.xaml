@@ -1,0 +1,14 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RemoteDeviceControllerForWindows.UserControls"
+             xmlns:ViewModels="clr-namespace:RemoteDeviceControllerForWindows.ViewModels" x:Name="userControl" x:Class="RemoteDeviceControllerForWindows.UserControls.ServerInfoControl"
+             mc:Ignorable="d" Height="36.696" Width="298.068">
+    <Grid>
+        <TextBlock x:Name="nameTextBlock" Margin="10,12,195,0" Text="{Binding ServerName, ElementName=userControl}" VerticalAlignment="Top" Width="93"/>
+        <TextBlock x:Name="serviceAddressTextBlock" Margin="108,12,25,0" Text="{Binding ServiceAddress, ElementName=userControl}" VerticalAlignment="Top"/>
+        <CheckBox x:Name="fileAccessServiceSupportCheckBox" Content="" HorizontalAlignment="Right" Margin="271,12,0,0" VerticalAlignment="Top" IsEnabled="False" IsChecked="{Binding IsFileAccessServiceSupport, ElementName=userControl}"/>
+    </Grid>
+</UserControl>

@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteDeviceControllerForWindows", "RemoteDeviceControllerForWindows\RemoteDeviceControllerForWindows.csproj", "{37AD1B3B-FC78-4FEA-89C8-26FBCAD02969}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{9C46D2A4-801A-42FE-8534-F46AF8FA0AC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{EE25D99C-C7A9-4F84-8F1D-EA1C096806D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUI", "TestUI\TestUI.csproj", "{865587D7-8E79-42E7-AA88-440648574E15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteDeviceControllerServer", "RemoteDeviceControllerServer\RemoteDeviceControllerServer.csproj", "{1818FC9A-BA73-4FEC-8B27-E2D259304B48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteDeviceControllerClient", "RemoteDeviceControllerClient\RemoteDeviceControllerClient.csproj", "{D06C73A5-E6A4-46F8-BA7D-FA5B94EBBD2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NATTraversalService", "NATTraversalService\NATTraversalService.csproj", "{A72E98F5-78AA-4600-99E9-9D8A5B178341}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37AD1B3B-FC78-4FEA-89C8-26FBCAD02969}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37AD1B3B-FC78-4FEA-89C8-26FBCAD02969}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37AD1B3B-FC78-4FEA-89C8-26FBCAD02969}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37AD1B3B-FC78-4FEA-89C8-26FBCAD02969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C46D2A4-801A-42FE-8534-F46AF8FA0AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C46D2A4-801A-42FE-8534-F46AF8FA0AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C46D2A4-801A-42FE-8534-F46AF8FA0AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C46D2A4-801A-42FE-8534-F46AF8FA0AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE25D99C-C7A9-4F84-8F1D-EA1C096806D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE25D99C-C7A9-4F84-8F1D-EA1C096806D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE25D99C-C7A9-4F84-8F1D-EA1C096806D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE25D99C-C7A9-4F84-8F1D-EA1C096806D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{865587D7-8E79-42E7-AA88-440648574E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{865587D7-8E79-42E7-AA88-440648574E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{865587D7-8E79-42E7-AA88-440648574E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{865587D7-8E79-42E7-AA88-440648574E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1818FC9A-BA73-4FEC-8B27-E2D259304B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1818FC9A-BA73-4FEC-8B27-E2D259304B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1818FC9A-BA73-4FEC-8B27-E2D259304B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1818FC9A-BA73-4FEC-8B27-E2D259304B48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D06C73A5-E6A4-46F8-BA7D-FA5B94EBBD2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D06C73A5-E6A4-46F8-BA7D-FA5B94EBBD2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D06C73A5-E6A4-46F8-BA7D-FA5B94EBBD2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D06C73A5-E6A4-46F8-BA7D-FA5B94EBBD2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72E98F5-78AA-4600-99E9-9D8A5B178341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72E98F5-78AA-4600-99E9-9D8A5B178341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72E98F5-78AA-4600-99E9-9D8A5B178341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72E98F5-78AA-4600-99E9-9D8A5B178341}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
